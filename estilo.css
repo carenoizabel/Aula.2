@@ -1,3 +1,7 @@
 body {
-  background: #CCC;
+  background: rgb(255, 255, 255);
+}
+
+header{
+  text-align: center;
 }
