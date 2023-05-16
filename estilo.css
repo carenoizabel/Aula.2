@@ -1,7 +1,53 @@
-body {
-  background: rgb(255, 255, 255);
+/* Estilo para o cabeçalho */
+header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
 }
 
-header{
+h1 {
+  font-size: 28px;
+  color: #333;
+}
+
+h2 {
+  font-size: 20px;
+  color: #666;
+}
+
+h3 {
+  font-size: 16px;
+  color: #999;
+}
+
+/* Estilo para o conteúdo principal */
+main {
+  margin: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+#produto-destaque {
+  width: 300px;
+  height: 300px;
+  background-color: #f1f1f1;
+  margin-bottom: 20px;
+}
+
+#lista-produtos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Estilo para o rodapé */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
   text-align: center;
 }
