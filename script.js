@@ -14,6 +14,14 @@ class Produto {
       this.imagem = imagem;
     }
   
+    retornarAtributosProduto(){
+      try{
+        return this.mostrarProduto();
+      } catch(error){
+        console.log(error);
+      }
+    }
+
     mostrarProduto() {
       if(this.nome != "" && this.artista != "" && this.descricao != "" && this.preco != "" && this.imagem != ""){
         return `
@@ -24,18 +32,11 @@ class Produto {
           <img src="${this.imagem}">
         `;
         } else{
-          throw new MeuErro("Todos os espaços deve ser preenchidos!");
+          throw new MeuErro("Todos os espaços deve ser preenchidos no produto!");
         }
       }
     }
-
-    retornarAtributosProduto() {
-      try{
-        return this.mostrarProduto();
-      } catch(error){
-        console.log(error);
-      }
-    } 
+  
   
   
   class ProdutoDestaque extends Produto {
@@ -62,7 +63,7 @@ class Produto {
         <img id="imagem-destaque" src="${this.imagemDestaque}">
       `;
       } else{
-        throw new MeuErro("Todos os espaços deve ser preenchidos!");
+        throw new MeuErro("Todos os espaços deve ser preenchidos no produto destaque!");
       }
     }
   }
@@ -82,12 +83,13 @@ class Produto {
   
   const produtoDestaqueElement = document.getElementById("produto-destaque");
   produtoDestaqueElement.innerHTML = produtoDestaque.mostrarProdutoDestaque();
-  const erro = produtoDestaqueErro.retornarAtributosDestaque();
-  console.log(erro) 
+
+  const erroDestaque = produtoDestaqueErro.retornarAtributosDestaque();
+  console.log(erroDestaque) 
   
-  const erro = produtoDestaqueErro.retornarAtributosDestaque();
-  console.log(erro) const erro = produtoDestaqueErro.retornarAtributosDestaque();
-  console.log(erro) 
+  const erroProduto = produtoErro.retornarAtributosProduto();
+  console.log(erroProduto) 
+
 
 
   const listaProdutosElement = document.getElementById("lista-produtos");
